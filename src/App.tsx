@@ -1,8 +1,13 @@
-import SimpleTable from "./components/SimpleTable";
+/*import SimpleTable from "./components/SimpleTable";
 import data from "./users.json";
 import dayjs from "dayjs";
+*/
+
+import { Button } from "./components/ui/button";
+import { page } from "./pages/page";
 
 function App() {
+  /*
   const columns = [
     {
       header: "ID",
@@ -12,17 +17,7 @@ function App() {
     {
       header: "Nombre y Apellido",
       accessorFn: (row) => `${row.name} - ${row.lastname}`,
-    },
-    /*  {
-      header: "Name",
-      accessorKey: "name",
-      footer: "Mi ID",
-    },
-    {
-      header: "Lastname",
-      accessorKey: "lastname",
-      footer: "Mi ID",
-    }, */
+    },    
     {
       header: "Email",
       accessorKey: "email",
@@ -40,12 +35,33 @@ function App() {
       cell: (info) => dayjs(info.getValue()).format("DD/MM/YYYY"),
     },
   ];
+*/
 
   return (
-    <>
-      <h1>App</h1>
-      <SimpleTable data={data} columns={columns} />
-    </>
+    <div className="container mx-auto py-10">
+      {/* <SimpleTable columns={columns} data={data} /> */}
+      <page />
+      {/*   <Table>
+        <TableCaption>A list of your recent invoices.</TableCaption>
+        <TableHeader>
+          <TableRow>
+            <TableHead className="w-[100px]">Invoice</TableHead>
+            <TableHead>Status</TableHead>
+            <TableHead>Method</TableHead>
+            <TableHead className="text-right">Amount</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          <TableRow>
+            <TableCell className="font-medium">INV001</TableCell>
+            <TableCell>Paid</TableCell>
+            <TableCell>Credit Card</TableCell>
+            <TableCell className="text-right">$250.00</TableCell>
+          </TableRow>
+        </TableBody>
+      </Table> */}
+      {/* <DataTable columns={columns} data={data} /> */}
+    </div>
   );
 }
 
