@@ -1,13 +1,16 @@
-/*import SimpleTable from "./components/SimpleTable";
+// import SimpleTable from "./components/SimpleTable";
 import data from "./users.json";
 import dayjs from "dayjs";
-*/
 
+
+import SimpleTable from "./components/SimpleTable";
 import { Button } from "./components/ui/button";
+import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "./components/ui/table";
 import { page } from "./pages/page";
+import { DataTable } from "./payments/DataTable";
 
 function App() {
-  /*
+
   const columns = [
     {
       header: "ID",
@@ -35,13 +38,13 @@ function App() {
       cell: (info) => dayjs(info.getValue()).format("DD/MM/YYYY"),
     },
   ];
-*/
+
 
   return (
     <div className="container mx-auto py-10">
-      {/* <SimpleTable columns={columns} data={data} /> */}
-      <page />
-      {/*   <Table>
+      <SimpleTable columns={columns} data={data} />
+      {/* <page /> */}
+        <Table>
         <TableCaption>A list of your recent invoices.</TableCaption>
         <TableHeader>
           <TableRow>
@@ -59,8 +62,8 @@ function App() {
             <TableCell className="text-right">$250.00</TableCell>
           </TableRow>
         </TableBody>
-      </Table> */}
-      {/* <DataTable columns={columns} data={data} /> */}
+      </Table> 
+      <DataTable columns={columns} data={data} /> 
     </div>
   );
 }
