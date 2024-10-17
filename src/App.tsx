@@ -11,6 +11,8 @@ import { DataTable } from "./payments/DataTable";
 
 function App() {
 
+  
+
   const columns = [
     {
       header: "ID",
@@ -39,12 +41,14 @@ function App() {
     },
   ];
 
+  
 
   return (
     <div className="container mx-auto py-10">
+      
       <SimpleTable columns={columns} data={data} />
       {/* <page /> */}
-        <Table>
+        {/*<Table>
         <TableCaption>A list of your recent invoices.</TableCaption>
         <TableHeader>
           <TableRow>
@@ -62,8 +66,8 @@ function App() {
             <TableCell className="text-right">$250.00</TableCell>
           </TableRow>
         </TableBody>
-      </Table> 
-      <DataTable columns={columns} data={data} /> 
+      </Table> */}
+      {/* <DataTable columns={columns} data={data} /> */}
     </div>
   );
 }
